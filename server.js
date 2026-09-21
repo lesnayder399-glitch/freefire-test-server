@@ -17,7 +17,13 @@ app.get("/ping", (req, res) => {
     status: "ok"
   });
 });
-
+app.get("/api/server-info", (req, res) => {
+  res.json({
+    name: "FF2023 Test Server",
+    version: "2023",
+    status: "online"
+  });
+});
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });

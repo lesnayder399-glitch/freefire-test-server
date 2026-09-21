@@ -24,6 +24,14 @@ app.get("/api/server-info", (req, res) => {
     status: "online"
   });
 });
+
+app.get("/api/test", (req, res) => {
+  res.json({
+    server: "FF2023 Test Server",
+    connected: true,
+    message: "Client reached the test server"
+  });
+});
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
